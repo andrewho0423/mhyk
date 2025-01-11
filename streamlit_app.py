@@ -108,7 +108,7 @@ if event == "祭典(祝祭)":
             key="totsu_3"
         )
     team_4 = st.radio(
-        label="請選擇隊員卡3的稀有度與突破數",
+        label="請選擇隊員卡4的稀有度與突破數",
         options=["非活動卡", "SSR", "SR", "R"],
         horizontal=True,
         key="team_4"
