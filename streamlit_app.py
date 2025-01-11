@@ -7,3 +7,18 @@ event = st.radio(
     options = ["一般活動", "祭典(祝祭)", "奏鳴曲(ソナチネ)"],
     horizontal=True
 )
+if event == "祭典(祝祭)":
+    kakusei_rarity = st.radio(
+        label = "請選擇小人稀有度(若活動選擇祭典，則只有三星小人；若活動選擇奏鳴曲，則只有四星小人)",
+        options = ["3星"]
+    )
+elif event == "祭典(祝祭)":
+    kakusei_rarity = st.radio(
+        label = "請選擇小人稀有度(若活動選擇祭典，則只有三星小人；若活動選擇奏鳴曲，則只有四星小人)",
+        options = ["4星"]
+    )
+else:
+    kakusei_rarity = st.radio(
+        label = "請選擇小人稀有度(若活動選擇祭典，則只有三星小人；若活動選擇奏鳴曲，則只有四星小人)",
+        options = ["4星", "3星"]
+    )
