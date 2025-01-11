@@ -1,6 +1,13 @@
 import streamlit as st
+from PIL import Image
 from calculate import percentage_calculate
 
+image = Image.open("favicon.ico")
+st.set_page_config(
+    page_title="法使小人計算機",
+    page_icon=image,
+    layout="wide",
+)
 st.title("魔法使的約定--活動覺醒小人特效%數計算機")
 
 # Initialize some parameters
