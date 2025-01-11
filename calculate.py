@@ -40,14 +40,14 @@ def percentage_calculate(
     totsu_5: int=0,
 ):
     kakusei_perc = PERC_DICT["小人稀有度"][kakusei_rarity]
-    perc_0 = 0 if main == "非活動卡" else PERC_DICT[type_0][main]*totsu_0
-    perc_1 = 0 if team_1 == "非活動卡" else PERC_DICT[type_1][team_1]*totsu_1
-    perc_2 = 0 if team_2 == "非活動卡" else PERC_DICT[type_2][team_2]*totsu_2
-    perc_3 = 0 if team_3 == "非活動卡" else PERC_DICT[type_3][team_3]*totsu_3
-    perc_4 = 0 if team_4 == "非活動卡" else PERC_DICT[type_4][team_4]*totsu_4
+    perc_0 = 0 if main == "非活動卡" else PERC_DICT[type_0][main]*(totsu_0+1)
+    perc_1 = 0 if team_1 == "非活動卡" else PERC_DICT[type_1][team_1]*(totsu_1+1)
+    perc_2 = 0 if team_2 == "非活動卡" else PERC_DICT[type_2][team_2]*(totsu_2+1)
+    perc_3 = 0 if team_3 == "非活動卡" else PERC_DICT[type_3][team_3]*(totsu_3+1)
+    perc_4 = 0 if team_4 == "非活動卡" else PERC_DICT[type_4][team_4]*(totsu_4+1)
     if team_5 == "好友卡(默認SSR)":
         perc_5 = 10
     else:
-        perc_5 = 0 if team_5 == "非活動卡" else PERC_DICT[type_5][team_5]*totsu_5
+        perc_5 = 0 if team_5 == "非活動卡" else PERC_DICT[type_5][team_5]*(totsu_5+1)
     perc_total = kakusei_perc+min(perc_0+perc_1+perc_2+perc_3+perc_4+perc_5, 60)
     return perc_total
